@@ -1,5 +1,115 @@
 .container {
+  max-width: 700px;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  padding: 1em 2em 0;
+  background: #efefef;
+  /* overflow-y: scroll; */
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 1em;
+  transition: all 300ms;
+}
+
+.labels {
+  font-size: 1rem;
+  display: block;
+  opacity: 1;
+  transform: translateY(-1.65em);
+  transform-origin: 0 0;
+  transition: all 300ms;
+}
+
+.inputs {
+  box-shadow: none;
+  background: #efefef;
+  border-radius: 0;
+  border-color: #ccc;
+  border-style: none none solid none;
+  width: 100%;
+  transition: all 500ms;
+  padding: 0.5em 0;
+  font-size: 0.85rem;
+}
+
+.inputs::placeholder {
+  color: transparent;
+}
+
+.inputs:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #9c27b0;
+}
+
+.formGroup:focus-within {
+  transform: scale(1.05, 1.05);
+}
+
+.inputs:focus + .labels,
+.inputs:not(:placeholder-shown) + .labels {
+  transform: translateY(-2.8em) scale(0.7);
+}
+
+/* .inputs {
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 0.85rem;
+  background: #efefef;
+  outline: none;
+}
+
+.inputs:focus {
+  border: 1px solid #9c27b0;
+} */
+
+.btn {
+  background: #9c27b0;
+  width: 20%;
+  color: white;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border: 0;
+  outline: 0;
+  transform: scale(1);
+  transition: transform 500ms;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+}
+
+span {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
 }
