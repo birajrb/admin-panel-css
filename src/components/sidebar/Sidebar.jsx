@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import styles from "./Sidebar.module.css";
 import HomeIcon from "@mui/icons-material/Home";
 import CreateIcon from "@mui/icons-material/Create";
@@ -6,12 +5,11 @@ import GroupIcon from "@mui/icons-material/Group";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import TableChartIcon from "@mui/icons-material/TableChart";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 function Sidebar() {
   const history = useHistory();
-  const reference = useRef(null);
-  const [active, setActive] = useState(0);
+  const location = useLocation();
 
   const menuItems = [
     { title: "Home", icon: <HomeIcon />, path: "/" },
@@ -22,10 +20,6 @@ function Sidebar() {
     { title: "Tables", icon: <TableChartIcon />, path: "/table" },
   ];
 
-  const handleClick = (item, key) => {
-    setActive(key);
-    history.push(item.path);
-  };
   return (
     <div className={styles.sidebar}>
       <div className={styles.titleContainer}>
@@ -33,12 +27,12 @@ function Sidebar() {
         <div className={styles.title}>Admin Panel</div>
       </div>
       <div className={styles.sidebarItems}>
-        <ul className={styles.itemsList} ref={reference}>
+        <ul className={styles.itemsList}>
           {menuItems.map((item, key) => (
             <li
               key={key}
-              className={active === key ? styles.active : null}
-              onClick={() => handleClick(item, key)}
+              className={location.pathname === item.path ? styles.active : null}
+              onClick={() => history.push(item.path)}
             >
               <div className={styles.spacing}></div>
               <div className={styles.icon}>{item.icon}</div>

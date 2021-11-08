@@ -1,9 +1,9 @@
 .container {
   max-width: 700px;
   width: 100%;
-  height: 100%;
-  padding: 1em 2em 0;
-  background: #efefef;
+  padding: 2em 2em 2em;
+  background: white;
+  border-radius: 6px;
   /* overflow-y: scroll; */
 }
 
@@ -18,7 +18,7 @@
 }
 
 .labels {
-  font-size: 1rem;
+  font-size: 0.96rem;
   display: block;
   opacity: 1;
   transform: translateY(-1.65em);
@@ -28,10 +28,9 @@
 
 .inputs {
   box-shadow: none;
-  background: #efefef;
   border-radius: 0;
-  border-color: #ccc;
   border-style: none none solid none;
+  border-bottom: 1px solid #ccc;
   width: 100%;
   transition: all 500ms;
   padding: 0.5em 0;
@@ -76,7 +75,7 @@
 } */
 
 .btn {
-  background: #9c27b0;
+  background-image: linear-gradient(to bottom right, #ab47bc, #9127ac);
   width: 20%;
   color: white;
   text-transform: uppercase;

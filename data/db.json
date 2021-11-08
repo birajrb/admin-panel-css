@@ -6,6 +6,41 @@
       "username": "Luffy",
       "email": "luffy@gmail.com",
       "id": 1
+    },
+    {
+      "fname": "Biraj",
+      "lname": "Rajbhandari",
+      "username": "MuggiwaraLuffy",
+      "email": "birajr0@gmail.com",
+      "id": 2
+    },
+    {
+      "fname": "adsf",
+      "lname": "df",
+      "username": "afd",
+      "email": "afd",
+      "id": 4
+    },
+    {
+      "fname": "Luffy",
+      "lname": "Monkey",
+      "username": "Monkey D Luffy",
+      "email": "Luffy@gmail.com",
+      "id": 5
+    },
+    {
+      "fname": "sdf",
+      "lname": "sff",
+      "username": "dffs",
+      "email": "f",
+      "id": 6
+    },
+    {
+      "fname": "Roronoa",
+      "lname": "Zoro",
+      "username": "TheLostMan",
+      "email": "Roronoazoro@gmail.com",
+      "id": 7
     }
   ]
 }
