@@ -5,6 +5,7 @@ import GroupIcon from "@mui/icons-material/Group";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import TableChartIcon from "@mui/icons-material/TableChart";
+import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined";
 import { useHistory, useLocation } from "react-router-dom";
 
 function Sidebar() {

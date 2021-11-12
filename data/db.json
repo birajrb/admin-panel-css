@@ -1,46 +1,104 @@
 {
   "details": [
     {
-      "fname": "Monkey D.",
-      "lname": "Luffy",
-      "username": "Luffy",
-      "email": "luffy@gmail.com",
-      "id": 1
-    },
-    {
       "fname": "Biraj",
       "lname": "Rajbhandari",
       "username": "MuggiwaraLuffy",
       "email": "birajr0@gmail.com",
+      "city": "Pokhara ",
+      "country": "Nepal",
+      "postal": "10010",
+      "id": 1
+    },
+    {
+      "fname": "Monkey D.",
+      "lname": "Luffy",
+      "username": "Monkey D. Luffy",
+      "email": "Luffy@gmail.com",
+      "city": "East Blue",
+      "country": "Japan",
+      "postal": "123",
       "id": 2
     },
     {
-      "fname": "adsf",
-      "lname": "df",
-      "username": "afd",
-      "email": "afd",
+      "fname": "Kabir",
+      "lname": "Tamari",
+      "username": "Lurayy",
+      "email": "lurayy@gmail.com",
+      "city": "Pokhara",
+      "country": "Nepal",
+      "postal": "00977",
+      "id": 3
+    },
+    {
+      "fname": "Aayusome",
+      "lname": "Luitel",
+      "username": "Noobda",
+      "email": "noobda@gmail.com",
+      "city": "Kathmandu",
+      "country": "Nepal",
+      "postal": "00977",
       "id": 4
     },
     {
-      "fname": "Luffy",
-      "lname": "Monkey",
-      "username": "Monkey D Luffy",
-      "email": "Luffy@gmail.com",
+      "fname": "Anchal",
+      "lname": "Gurung",
+      "username": "Ghale",
+      "email": "Anchalgrg@gmail.com",
+      "city": "Pokhara",
+      "country": "Nepal",
+      "postal": "00977",
       "id": 5
     },
     {
-      "fname": "sdf",
-      "lname": "sff",
-      "username": "dffs",
-      "email": "f",
+      "fname": "asd",
+      "lname": "as",
+      "username": "dadsa",
+      "email": "dasd@gmail.com",
+      "city": "sdfa",
+      "country": "fsad",
+      "postal": "12",
       "id": 6
     },
     {
-      "fname": "Roronoa",
-      "lname": "Zoro",
-      "username": "TheLostMan",
-      "email": "Roronoazoro@gmail.com",
+      "fname": "sadd",
+      "lname": "sadas",
+      "username": "asdasd",
+      "email": "adsd@gmail.com",
+      "city": "sdfa",
+      "country": "fasdf",
+      "postal": "12123",
       "id": 7
+    },
+    {
+      "fname": "daf",
+      "lname": "adf",
+      "username": "daf",
+      "email": "asdas@dfgasf",
+      "city": "sdaa",
+      "country": "ased",
+      "postal": "12",
+      "id": 8
+    },
+    {
+      "fname": "Novo",
+      "lname": "Amor",
+      "username": "NovoAmor",
+      "email": "NovoAmor@gmail.com",
+      "city": "Cardiff",
+      "country": "United Kingdom",
+      "postal": "CF10",
+      "id": 9
+    },
+    {
+      "fname": "Baka ",
+      "lname": "Inu",
+      "username": "BakaInu",
+      "email": "BakaInu@gmail.com",
+      "city": "Pokhara",
+      "country": "Nepal",
+      "postal": "00977",
+      "id": 10
     }
   ]
 }
