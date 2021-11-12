@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Home.module.css";
+import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import ReportGmailerrorredOutlinedIcon from "@mui/icons-material/ReportGmailerrorredOutlined";
+import EmojiPeopleOutlinedIcon from "@mui/icons-material/EmojiPeopleOutlined";
+import cx from "classnames";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -16,33 +21,75 @@ function Home() {
     console.log(data);
   }, []);
   return (
-    <div>
-      <div>
-        <table className={styles.table}>
-          <thead className={styles.headerDetails}>
-            <tr>
-              <td className={styles.details} rowspan="4">
-                Details
-              </td>
-            </tr>
-          </thead>
-          <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          {data.map((item) => (
-            <tr key={item.id}>
-              <td>{item.fname}</td>
-              <td>{item.lname}</td>
-              <td>{item.username}</td>
-              <td>{item.email}</td>
-            </tr>
-          ))}
-        </table>
+    <div className={styles.container}>
+      <div className={styles.cardContainer}>
+        <div className={cx(styles.card, styles.cardFirst)}>
+          <div className={styles.description}>
+            <div className={cx(styles.icon, styles.iconOne)}>
+              <StorageOutlinedIcon fontSize="large" />
+            </div>
+            <p className={styles.descPara}>Used Space</p>
+            <p className={styles.descDetail}>50 GB</p>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.description}>
+            <div className={cx(styles.icon, styles.iconTwo)}>
+              <HomeOutlinedIcon fontSize="large" />
+            </div>
+            <p className={styles.descPara}>Revenue</p>
+            <p className={styles.descDetail}>$34500</p>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.description}>
+            <div className={cx(styles.icon, styles.iconThree)}>
+              <ReportGmailerrorredOutlinedIcon fontSize="large" />
+            </div>
+            <p className={styles.descPara}>Fixed Issues</p>
+            <p className={styles.descDetail}>75</p>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.description}>
+            <div className={cx(styles.icon, styles.iconFour)}>
+              <EmojiPeopleOutlinedIcon fontSize="large" />
+            </div>
+            <p className={styles.descPara}>Followers</p>
+            <p className={styles.descDetail}>+245</p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.tableContainer}>
+        <div className={styles.tableTitle}>
+          <h2 className={styles.tableHeader}>Details</h2>
+        </div>
+        <div className={styles.wrapper}>
+          <table className={styles.table}>
+            <thead className={styles.thead}>
+              <tr className={styles.tr}>
+                <th className={styles.th}>First Name</th>
+                <th className={styles.th}>Last Name</th>
+                <th className={styles.th}>Username</th>
+                <th className={styles.th}>Email</th>
+                <th className={styles.th}>City</th>
+                <th className={styles.th}>Country</th>
+                <th className={styles.th}>Postal Code</th>
+              </tr>
+            </thead>
+            {data.map((item) => (
+              <tr className={styles.tr} key={item.id}>
+                <td className={styles.td}>{item.fname}</td>
+                <td className={styles.td}>{item.lname}</td>
+                <td className={styles.td}>{item.username}</td>
+                <td className={styles.td}>{item.email}</td>
+                <td className={styles.td}>{item.city}</td>
+                <td className={styles.td}>{item.country}</td>
+                <td className={styles.td}>{item.postal}</td>
+              </tr>
+            ))}
+          </table>
+        </div>
       </div>
     </div>
   );
