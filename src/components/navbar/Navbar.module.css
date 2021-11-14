@@ -20,9 +20,28 @@
   display: flex;
   flex-direction: row;
   list-style: none;
-  margin-top: 0.85em;
+  margin-top: 0.35em;
 }
 
 .listItems li {
-  margin: 0 2em;
+  margin: 0 1em;
+  color: #555555;
+  /* position: relative; */
+}
+
+.icons {
+  padding: 0.2em;
+  border-radius: 50%;
+}
+
+.icons:hover,
+.icons:focus {
+  background-color: #a6a6a6;
+  cursor: pointer;
+  transition: background-color 1000ms ease;
+  /* border-radius: 0%; */
+}
+
+.menuNotifications {
+  width: 300px;
 }

@@ -4,6 +4,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Create from "./pages/Create";
 import Home from "./pages/Home";
+import Table from "./pages/Table";
+import Widgets from "./pages/Widgets";
 
 function App() {
   return (
@@ -20,6 +22,12 @@ function App() {
             </Route>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/table">
+              <Table />
+            </Route>
+            <Route path="/widgets">
+              <Widgets />
             </Route>
           </Switch>
         </div>

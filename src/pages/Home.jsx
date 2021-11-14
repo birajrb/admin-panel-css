@@ -68,24 +68,18 @@ function Home() {
           <table className={styles.table}>
             <thead className={styles.thead}>
               <tr className={styles.tr}>
-                <th className={styles.th}>First Name</th>
-                <th className={styles.th}>Last Name</th>
+                <th className={styles.th}>Name</th>
                 <th className={styles.th}>Username</th>
                 <th className={styles.th}>Email</th>
-                <th className={styles.th}>City</th>
-                <th className={styles.th}>Country</th>
-                <th className={styles.th}>Postal Code</th>
               </tr>
             </thead>
             {data.map((item) => (
               <tr className={styles.tr} key={item.id}>
-                <td className={styles.td}>{item.fname}</td>
-                <td className={styles.td}>{item.lname}</td>
+                <td className={styles.td}>
+                  {item.fname} {item.lname}
+                </td>
                 <td className={styles.td}>{item.username}</td>
                 <td className={styles.td}>{item.email}</td>
-                <td className={styles.td}>{item.city}</td>
-                <td className={styles.td}>{item.country}</td>
-                <td className={styles.td}>{item.postal}</td>
               </tr>
             ))}
           </table>
