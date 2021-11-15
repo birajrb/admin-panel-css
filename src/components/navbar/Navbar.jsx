@@ -3,7 +3,6 @@ import styles from "./Navbar.module.css";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import HomeIcon from "@mui/icons-material/Home";
-import "./custom.css";
 import ProfileDropdown from "./ProfileDropdown";
 import NotificationDropdown from "./NotificationDropdown";
 import HomeDropDown from "./HomeDropDown";
