@@ -6,8 +6,10 @@ import Create from "./pages/Create";
 import Home from "./pages/Home";
 import Table from "./pages/Table";
 import Widgets from "./pages/Widgets";
+import { useState } from "react";
 
 function App() {
+  const [notiNavigation, setNotiNavigation] = useState([]);
   return (
     <Router>
       <div className={styles.container}>
@@ -15,10 +17,10 @@ function App() {
         <Sidebar />
         {/* navbar */}
         <div className={styles.containerBody}>
-          <Navbar />
+          <Navbar notiNavigation={notiNavigation} />
           <Switch>
             <Route path="/create" exact>
-              <Create />
+              <Create setNotiNavigation={setNotiNavigation} />
             </Route>
             <Route path="/" exact>
               <Home />

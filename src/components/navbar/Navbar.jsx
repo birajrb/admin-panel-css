@@ -7,8 +7,9 @@ import "./custom.css";
 import ProfileDropdown from "./ProfileDropdown";
 import NotificationDropdown from "./NotificationDropdown";
 import HomeDropDown from "./HomeDropDown";
+import cx from "classnames";
 
-function Navbar() {
+function Navbar({ notiNavigation }) {
   const profileDropdownRef = useRef(null);
   const [isProfileActive, setIsProfileActive] = useState(false);
 
@@ -37,7 +38,10 @@ function Navbar() {
       <ul className={styles.listItems}>
         <li className={styles.listElements}>
           <HomeIcon
-            className={styles.icons}
+            className={cx(
+              styles.icons,
+              homeIsActive ? styles.clickActive : null
+            )}
             fontSize="large"
             onClick={handleHome}
           />
@@ -48,11 +52,16 @@ function Navbar() {
         </li>
         <li className={styles.listElements}>
           <NotificationsIcon
-            className={styles.icons}
+            className={cx(
+              styles.icons,
+              isNotificationActive ? styles.clickActive : null
+            )}
             fontSize="large"
             onClick={handleNotification}
           />
+          <div className={styles.notify}>{notiNavigation.length}</div>
           <NotificationDropdown
+            notiNavigation={notiNavigation}
             notificationRef={notificationRef}
             isNotificationActive={isNotificationActive}
             setIsNotificationActive={setIsNotificationActive}
@@ -60,7 +69,10 @@ function Navbar() {
         </li>
         <li className={styles.listElements}>
           <PersonIcon
-            className={styles.icons}
+            className={cx(
+              styles.icons,
+              isProfileActive ? styles.clickActive : null
+            )}
             fontSize="large"
             onClick={handleProfile}
           />

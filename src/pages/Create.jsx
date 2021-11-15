@@ -4,7 +4,7 @@ import styles from "./Create.module.css";
 import "./custom.css";
 import cx from "classnames";
 
-export default function Create() {
+export default function Create({ setNotiNavigation }) {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [username, setUsername] = useState("");
@@ -20,6 +20,7 @@ export default function Create() {
   const handleSubmit = (e) => {
     console.log(fname, lname, username, email);
     setError({});
+
     e.preventDefault();
     var err = {};
     if (fname === "") {
@@ -69,6 +70,18 @@ export default function Create() {
         .catch((err) => {
           console.log(err);
         });
+
+      setNotiNavigation((prev) =>
+        prev.concat({
+          fname,
+          lname,
+          username,
+          email,
+          city,
+          country,
+          postal,
+        })
+      );
     }
   };
 

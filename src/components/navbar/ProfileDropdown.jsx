@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import styles from "./Navbar.module.css";
+import cx from "classnames";
 
 function ProfileDropdown({
   profileDropdownRef,
@@ -23,15 +25,21 @@ function ProfileDropdown({
       window.removeEventListener("click", pageClickEvent);
     };
   }, [isProfileActive]);
+  const history = useHistory();
+  const handleNavigation = (path) => {
+    setIsProfileActive(false);
+    history.push(path);
+  };
 
   return (
     <nav
       ref={profileDropdownRef}
-      className={`menu ${isProfileActive ? "active" : "inactive"}`}
+      className={cx(isProfileActive ? styles.active : "inactive", styles.menu)}
     >
+      {console.log(isProfileActive)}
       <ul>
-        <li>
-          <Link to="/profile">Profile</Link>
+        <li onClick={() => handleNavigation("/profile")}>
+          {/* <Link to="/profile">Profile</Link> */}Profile
         </li>
         <li>
           <Link to="/settings">Settings</Link>

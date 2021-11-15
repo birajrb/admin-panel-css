@@ -7,6 +7,7 @@ function NotificationDropdown({
   notificationRef,
   isNotificationActive,
   setIsNotificationActive,
+  notiNavigation,
 }) {
   useEffect(() => {
     const pageClickEvent = (e) => {
@@ -30,14 +31,16 @@ function NotificationDropdown({
     <nav
       ref={notificationRef}
       className={cx(
-        `menu ${isNotificationActive ? "active" : "inactive"}`,
+        isNotificationActive ? styles.active : null,
+        styles.menu,
         styles.menuNotifications
       )}
     >
       <ul>
-        <li>
-          <Link>This is notificLinktion</Link>
-        </li>
+        {console.log(notiNavigation)}
+        {notiNavigation
+          ? notiNavigation.map((value) => <li>{value.fname} is added</li>)
+          : null}
         <li>
           <Link>This is Settings</Link>
         </li>
