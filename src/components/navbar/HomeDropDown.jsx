@@ -25,15 +25,9 @@ function HomeDropDown({ homeIsActive, setHomeIsActive }) {
       ref={homeRef}
     >
       <ul>
-        <li>
-          <Link>Home</Link>
-        </li>
-        <li>
-          <Link>Home</Link>
-        </li>
-        <li>
-          <Link>Home</Link>
-        </li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
       </ul>
     </nav>
   );

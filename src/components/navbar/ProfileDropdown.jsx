@@ -41,12 +41,8 @@ function ProfileDropdown({
         <li onClick={() => handleNavigation("/profile")}>
           {/* <Link to="/profile">Profile</Link> */}Profile
         </li>
-        <li>
-          <Link to="/settings">Settings</Link>
-        </li>
-        <li>
-          <Link to="/logout">Logout</Link>
-        </li>
+        <li onClick={() => handleNavigation("/settings")}>Settings</li>
+        <li onClick={() => handleNavigation("/logout")}>Logout</li>
       </ul>
     </nav>
   );

@@ -39,14 +39,10 @@ function NotificationDropdown({
       <ul>
         {console.log(notiNavigation)}
         {notiNavigation
-          ? notiNavigation.map((value) => <li>{value.fname} is added</li>)
+          ? notiNavigation.map((value) => (
+              <li>{value.fname} has joined the crew</li>
+            ))
           : null}
-        <li>
-          <Link>This is Settings</Link>
-        </li>
-        <li>
-          <Link>This is Logout</Link>
-        </li>
       </ul>
     </nav>
   );

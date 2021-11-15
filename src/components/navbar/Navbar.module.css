@@ -87,9 +87,6 @@
   );
   background-position: 100% 100%;
   background-size: 2000%;
-}
-
-.menu li a {
   text-align: center;
   text-decoration: none;
   color: #333333;
@@ -99,6 +96,7 @@
 
 .menu li:hover {
   background-position: 60% 50%;
+  cursor: pointer;
 }
 
 /* .menu li:hover a {
@@ -122,4 +120,8 @@
   border-radius: 5px;
   color: white;
   font-size: 0.65rem;
+}
+
+.notificationGang:hover {
+  cursor: none;
 }

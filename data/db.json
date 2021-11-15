@@ -1,46 +1,6 @@
 {
   "details": [
     {
-      "fname": "Biraj",
-      "lname": "Rajbhandari",
-      "username": "MuggiwaraLuffy",
-      "email": "birajr0@gmail.com",
-      "city": "Pokhara ",
-      "country": "Nepal",
-      "postal": "10010",
-      "id": 1
-    },
-    {
-      "fname": "Monkey D.",
-      "lname": "Luffy",
-      "username": "Monkey D. Luffy",
-      "email": "Luffy@gmail.com",
-      "city": "East Blue",
-      "country": "Japan",
-      "postal": "123",
-      "id": 2
-    },
-    {
-      "fname": "Kabir",
-      "lname": "Tamari",
-      "username": "Lurayy",
-      "email": "lurayy@gmail.com",
-      "city": "Pokhara",
-      "country": "Nepal",
-      "postal": "00977",
-      "id": 3
-    },
-    {
-      "fname": "Aayusome",
-      "lname": "Luitel",
-      "username": "Noobda",
-      "email": "noobda@gmail.com",
-      "city": "Kathmandu",
-      "country": "Nepal",
-      "postal": "00977",
-      "id": 4
-    },
-    {
       "fname": "Anchal",
       "lname": "Gurung",
       "username": "Ghale",
@@ -49,36 +9,6 @@
       "country": "Nepal",
       "postal": "00977",
       "id": 5
-    },
-    {
-      "fname": "asd",
-      "lname": "as",
-      "username": "dadsa",
-      "email": "dasd@gmail.com",
-      "city": "sdfa",
-      "country": "fsad",
-      "postal": "12",
-      "id": 6
-    },
-    {
-      "fname": "sadd",
-      "lname": "sadas",
-      "username": "asdasd",
-      "email": "adsd@gmail.com",
-      "city": "sdfa",
-      "country": "fasdf",
-      "postal": "12123",
-      "id": 7
-    },
-    {
-      "fname": "daf",
-      "lname": "adf",
-      "username": "daf",
-      "email": "asdas@dfgasf",
-      "city": "sdaa",
-      "country": "ased",
-      "postal": "12",
-      "id": 8
     },
     {
       "fname": "Novo",
@@ -91,34 +21,24 @@
       "id": 9
     },
     {
-      "fname": "sad",
-      "lname": "asdsasd",
-      "username": "asda",
-      "email": "dasd@dadasf",
-      "city": "dfasfa",
-      "country": "faf",
-      "postal": "fdasf",
+      "fname": "Siloh",
+      "lname": "Dynasty",
+      "username": "Imagination",
+      "email": "Dynasty@gmail.com",
+      "city": "Kathmandu",
+      "country": "Nepal",
+      "postal": "00977",
       "id": 10
     },
     {
-      "fname": "sad",
-      "lname": "asda",
-      "username": "asd",
-      "email": "asd@sfdf",
-      "city": "fadf",
-      "country": "affa",
-      "postal": "fafaf",
+      "fname": "Biraj",
+      "lname": "Rajbhandari",
+      "username": "MuggiwaraLuffy",
+      "email": "birajr0@gmail.com",
+      "city": "Pokhara",
+      "country": "Nepal",
+      "postal": "00977",
       "id": 11
-    },
-    {
-      "fname": "sadd",
-      "lname": "sda",
-      "username": "dasd",
-      "email": "sadd@dasda",
-      "city": "dasda",
-      "country": "dasda",
-      "postal": "adda",
-      "id": 12
     }
   ]
 }
