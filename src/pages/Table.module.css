@@ -59,7 +59,34 @@
 }
 
 .td {
+  position: relative;
   padding: 1em 2em;
   font-size: 0.95rem;
   font-weight: 400;
+}
+
+.td:hover .overlay {
+  opacity: 1;
+  width: 100%;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #a849b54d;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition: all 500ms ease-in;
+}
+
+.deleteIcon:hover {
+  cursor: pointer;
+  color: red;
 }

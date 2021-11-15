@@ -1,10 +1,20 @@
 import React from "react";
 import styles from "./Table.module.css";
 import { useState, useEffect } from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
 import cx from "classnames";
 
 function Table() {
   const [data, setData] = useState([]);
+  const handleDelete = (id) => {
+    fetch("http://localhost:8000/details/" + id, {
+      method: "DELETE",
+    });
+
+    const newData = data.filter((datum) => datum.id !== id);
+    setData(newData);
+  };
+
   useEffect(() => {
     fetch("http://localhost:8000/details")
       .then((res) => {
@@ -37,7 +47,17 @@ function Table() {
           </thead>
           {data.map((item) => (
             <tr className={styles.tr} key={item.id}>
-              <td className={styles.td}>{item.fname}</td>
+              <td className={styles.td}>
+                <div className={styles.overlay}>
+                  <div
+                    className={styles.deleteIcon}
+                    onClick={() => handleDelete(item.id)}
+                  >
+                    <DeleteIcon />
+                  </div>
+                </div>
+                {item.fname}
+              </td>
               <td className={styles.td}>{item.lname}</td>
               <td className={styles.td}>{item.username}</td>
               <td className={styles.td}>{item.email}</td>
