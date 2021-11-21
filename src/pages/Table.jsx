@@ -3,6 +3,8 @@ import styles from "./Table.module.css";
 import { useState, useEffect } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import cx from "classnames";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Table() {
   const [data, setData] = useState([]);
@@ -10,7 +12,15 @@ function Table() {
     fetch("http://localhost:8000/details/" + id, {
       method: "DELETE",
     });
-
+    toast.success("Data deleted", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
     const newData = data.filter((datum) => datum.id !== id);
     setData(newData);
   };
@@ -66,6 +76,17 @@ function Table() {
               <td className={styles.td}>{item.postal}</td>
             </tr>
           ))}
+          <ToastContainer
+            position="bottom-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </table>
       </div>
     </div>

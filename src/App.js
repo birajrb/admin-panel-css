@@ -7,17 +7,36 @@ import Home from "./pages/Home";
 import Table from "./pages/Table";
 import Widgets from "./pages/Widgets";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [notiNavigation, setNotiNavigation] = useState([]);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+
   return (
     <Router>
       <div className={styles.container}>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         {/* sidebar */}
-        <Sidebar />
+        <Sidebar isOpen={isSidebarVisible} setIsOpen={setIsSidebarVisible} />
         {/* navbar */}
         <div className={styles.containerBody}>
-          <Navbar notiNavigation={notiNavigation} />
+          <Navbar
+            notiNavigation={notiNavigation}
+            isSidebarVisible={isSidebarVisible}
+            setIsSidebarVisible={setIsSidebarVisible}
+          />
           <Switch>
             <Route path="/create" exact>
               <Create setNotiNavigation={setNotiNavigation} />

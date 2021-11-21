@@ -3,6 +3,8 @@ import { useHistory } from "react-router";
 import styles from "./Create.module.css";
 import "./custom.css";
 import cx from "classnames";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Create({ setNotiNavigation }) {
   const [fname, setFname] = useState("");
@@ -65,6 +67,15 @@ export default function Create({ setNotiNavigation }) {
       })
         .then((res) => {
           console.log(res);
+          toast.success("Data deleted", {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
           history.push("/");
         })
         .catch((err) => {
@@ -195,7 +206,6 @@ export default function Create({ setNotiNavigation }) {
               </label>
             </div>
           </div>
-
           <div className={styles.formWrapper}>
             <div className={styles.formGroup}>
               <input
@@ -246,7 +256,6 @@ export default function Create({ setNotiNavigation }) {
               </label>
             </div>
           </div>
-
           <button id="btn" className={styles.btn} onClick={handleAnimation}>
             Submit
           </button>

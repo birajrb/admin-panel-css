@@ -22,6 +22,20 @@
   color: #7b7b7b;
   padding-left: 1em;
   background: #efefef;
-
+  overflow-x: hidden;
+  overflow-y: scroll;
   /* box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1); */
+}
+
+@media (max-width: 1390px) {
+  * {
+    box-sizing: border-box;
+  }
+  .containerBody {
+    /* container makes sidebar to cover it*/
+    width: 100%;
+    position: relative;
+    top: left;
+    right: left;
+  }
 }

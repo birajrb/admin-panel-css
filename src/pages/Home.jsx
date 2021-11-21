@@ -23,40 +23,44 @@ function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.cardContainer}>
-        <div className={cx(styles.card, styles.cardFirst)}>
-          <div className={styles.description}>
-            <div className={cx(styles.icon, styles.iconOne)}>
-              <StorageOutlinedIcon fontSize="large" />
+        <div className={styles.cardRow}>
+          <div className={cx(styles.card, styles.cardFirst)}>
+            <div className={styles.description}>
+              <div className={cx(styles.icon, styles.iconOne)}>
+                <StorageOutlinedIcon fontSize="large" />
+              </div>
+              <p className={styles.descPara}>Used Space</p>
+              <p className={styles.descDetail}>50 GB</p>
             </div>
-            <p className={styles.descPara}>Used Space</p>
-            <p className={styles.descDetail}>50 GB</p>
+          </div>
+          <div className={styles.card}>
+            <div className={styles.description}>
+              <div className={cx(styles.icon, styles.iconTwo)}>
+                <HomeOutlinedIcon fontSize="large" />
+              </div>
+              <p className={styles.descPara}>Revenue</p>
+              <p className={styles.descDetail}>$34500</p>
+            </div>
           </div>
         </div>
-        <div className={styles.card}>
-          <div className={styles.description}>
-            <div className={cx(styles.icon, styles.iconTwo)}>
-              <HomeOutlinedIcon fontSize="large" />
+        <div className={styles.cardRow}>
+          <div className={styles.card}>
+            <div className={styles.description}>
+              <div className={cx(styles.icon, styles.iconThree)}>
+                <ReportGmailerrorredOutlinedIcon fontSize="large" />
+              </div>
+              <p className={styles.descPara}>Fixed Issues</p>
+              <p className={styles.descDetail}>75</p>
             </div>
-            <p className={styles.descPara}>Revenue</p>
-            <p className={styles.descDetail}>$34500</p>
           </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.description}>
-            <div className={cx(styles.icon, styles.iconThree)}>
-              <ReportGmailerrorredOutlinedIcon fontSize="large" />
+          <div className={styles.card}>
+            <div className={styles.description}>
+              <div className={cx(styles.icon, styles.iconFour)}>
+                <EmojiPeopleOutlinedIcon fontSize="large" />
+              </div>
+              <p className={styles.descPara}>Followers</p>
+              <p className={styles.descDetail}>+245</p>
             </div>
-            <p className={styles.descPara}>Fixed Issues</p>
-            <p className={styles.descDetail}>75</p>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.description}>
-            <div className={cx(styles.icon, styles.iconFour)}>
-              <EmojiPeopleOutlinedIcon fontSize="large" />
-            </div>
-            <p className={styles.descPara}>Followers</p>
-            <p className={styles.descDetail}>+245</p>
           </div>
         </div>
       </div>

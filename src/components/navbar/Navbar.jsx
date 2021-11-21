@@ -6,9 +6,11 @@ import HomeIcon from "@mui/icons-material/Home";
 import ProfileDropdown from "./ProfileDropdown";
 import NotificationDropdown from "./NotificationDropdown";
 import HomeDropDown from "./HomeDropDown";
+import MenuIcon from "@mui/icons-material/Menu";
+
 import cx from "classnames";
 
-function Navbar({ notiNavigation }) {
+function Navbar({ notiNavigation, isSidebarVisible, setIsSidebarVisible }) {
   const profileDropdownRef = useRef(null);
   const [isProfileActive, setIsProfileActive] = useState(false);
 
@@ -31,8 +33,14 @@ function Navbar({ notiNavigation }) {
   };
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
-        <h2>Dashboard</h2>
+      <div className={styles.menuIcon}>
+        <MenuIcon
+          fontSize="large"
+          className={styles.icons}
+          onClick={() => {
+            setIsSidebarVisible(true);
+          }}
+        />
       </div>
       <ul className={styles.listItems}>
         <li className={styles.listElements}>

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import cx from "classnames";
 import styles from "./Navbar.module.css";
 
@@ -43,6 +42,8 @@ function NotificationDropdown({
               <li>{value.fname} has joined the crew</li>
             ))
           : null}
+        <li>Through and let's do</li>
+        <li>What we do in our imagination</li>
       </ul>
     </nav>
   );
