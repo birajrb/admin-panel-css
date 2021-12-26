@@ -1,25 +1,6 @@
 {
   "details": [
-    {
-      "fname": "Dichhen",
-      "lname": "Tamang",
-      "username": "TataBichhu",
-      "email": "Khosti@gmail.com",
-      "city": "Kathmandu",
-      "country": "Nepal",
-      "postal": "00977",
-      "id": 12
-    },
-    {
-      "fname": "Rinchhen",
-      "lname": "Tamang",
-      "username": "Rinkiya",
-      "email": "Rinku@gmail.com",
-      "city": "Kathmandu",
-      "country": "Nepal",
-      "postal": "00977",
-      "id": 13
-    },
+    
     {
       "fname": "Simsim",
       "lname": "Singh Lamichhane",
@@ -121,14 +102,14 @@
       "id": 23
     },
     {
-      "fname": "daf",
-      "lname": "afd",
-      "username": "af",
-      "email": "fdf@fdsaf",
-      "city": "fadf",
-      "country": "daf",
-      "postal": "aff",
-      "id": 24
+      "fname": "sada",
+      "lname": "dsada",
+      "username": "dsad",
+      "email": "sd@dad",
+      "city": "asd",
+      "country": "adsa",
+      "postal": "i90",
+      "id": 25
     }
   ]
 }
